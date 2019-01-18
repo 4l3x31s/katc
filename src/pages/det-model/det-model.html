@@ -1,0 +1,92 @@
+<!--
+  Generated template for the DetModelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>{{model?.nombre}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider class="divider-item-titulo" color="plomoClaro">
+      DETALLES...
+    </ion-item-divider>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="etiqueta">Edad:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.edad}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Estatura:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.estatura}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Cuerpo:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.cuerpo}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Piel:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.piel}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Descripción:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.descripcion}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item-divider class="divider-item-titulo" color="dark">
+      SERVICIO
+    </ion-item-divider>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="etiqueta">Servicio:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.servicio}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Hora:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.serv_hora}} Bs.</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Media Hora:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.serv_media_hora}} Bs.</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Dos Horas:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.serv_2_horas}}</ion-col>
+      </ion-row>
+
+    </ion-grid>
+    <ion-item-divider class="divider-item-titulo" color="dark">
+      RESERVAS
+    </ion-item-divider>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="etiqueta">Reservas:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.reservas}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item-divider class="divider-item-titulo" color="dark">
+      HORARIOS
+    </ion-item-divider>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="etiqueta">Horarios:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.horarios}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="etiqueta">Lugares de Atención:</ion-col>
+        <ion-col class="texto-etiqueta">{{model?.lugares_atencion}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <div *ngFor="let foto of model?.fotos">
+    <ion-card>
+      <img src="{{foto}}"/>
+    </ion-card>
+  </div>
+</ion-content>
